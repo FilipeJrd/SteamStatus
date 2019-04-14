@@ -7,4 +7,28 @@ targets:
     platform: iOS
     deploymentTarget: "10.0"
     sources: [SteamStatus]
+    dependencies:
+      - target: API
+  API:
+    type: framework
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [API]
+    scheme:
+      testTargets:
+        - APITests
+    dependencies:
+      - carthage: Alamofire
+      - carthage: RxSwift
+
+  APITests:
+    type: bundle.unit-test
+    platform: "iOS"
+    sources: [APITests]
+    dependencies:
+      - target: API
+      - carthage: Quick
+      - carthage: Nimble
+
+
 
