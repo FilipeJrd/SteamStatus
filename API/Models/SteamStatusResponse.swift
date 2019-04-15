@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct SteamStatusResponse: Codable {
-    let success: Bool
-    let time: Int
-    let online: Double
-    let services: [String: SteamService.Info]
+public struct SteamStatusResponse: Codable {
+    public let success: Bool
+    public let time: Int
+    public let online: Double
+    public let services: [String: SteamService.Info]
 }

@@ -27,6 +27,8 @@ targets:
     sources: [APITests]
     dependencies:
       - target: API
+      - carthage: RxTest
+      - carthage: RxBlocking
       - carthage: Quick
       - carthage: Nimble
 
